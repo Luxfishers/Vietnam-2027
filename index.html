@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Vietnam 2027 – Hidden Lands ride + Long Tan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F2; --surface:#FFFFFF; --ink:#18231F; --muted:#5C6B64; --line:#D5DDD8;
+  --forest:#1F4636; --forest-soft:#E3ECE6; --red:#B3302A; --ochre:#C28F22;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow","Segoe UI",Helvetica,Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A17; --surface:#1A2420; --ink:#E6ECE8; --muted:#9AA9A2; --line:#2E3B36;
+    --forest:#7FBF9F; --forest-soft:#20322A; --red:#E0655E; --ochre:#E0B04A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A17; --surface:#1A2420; --ink:#E6ECE8; --muted:#9AA9A2; --line:#2E3B36;
+  --forest:#7FBF9F; --forest-soft:#20322A; --red:#E0655E; --ochre:#E0B04A;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.55}
+a{color:var(--forest)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;color:var(--forest);margin-bottom:.4em}
+h3{font-size:1.35rem;font-weight:600;margin:1.4em 0 .4em}
+p{margin:.5em 0 1em;max-width:70ch}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--forest);color:#fff}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{color:#fff;text-decoration:none;font-family:var(--head);font-weight:600;font-size:1.05rem;padding:14px 12px;white-space:nowrap;opacity:.85}
+nav a:hover{opacity:1;background:rgba(255,255,255,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav{background:#0E1512}}
+
+/* hero */
+header.hero{padding:56px 0 40px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.8rem,8vw,5.6rem);font-weight:700;letter-spacing:-.01em;color:var(--ink);max-width:14ch}
+.hero .sub{font-size:1.25rem;color:var(--muted);margin:.8em 0 0;max-width:52ch}
+.updated{font-size:.9rem;color:var(--muted);margin-top:1.4em}
+
+/* route strip – the memorable element */
+.route{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(8,1fr);position:relative}
+.route::before{content:"";position:absolute;left:calc(100%/16);right:calc(100%/16);top:15px;height:4px;background:repeating-linear-gradient(90deg,var(--ochre) 0 14px,transparent 14px 22px)}
+.route li{position:relative;text-align:center;padding:0 4px}
+.route .dot{display:block;width:34px;height:34px;margin:0 auto 10px;border-radius:50%;background:var(--surface);border:4px solid var(--forest);position:relative;z-index:1;font-family:var(--head);font-weight:700;font-size:.95rem;line-height:26px;color:var(--forest);text-align:center}
+.route li.end .dot{background:var(--red);border-color:var(--red);color:#fff}
+.route .place{font-family:var(--head);font-weight:600;font-size:1.15rem;display:block}
+.route .km{font-size:.88rem;color:var(--muted)}
+.route-total{margin-top:18px;color:var(--muted);font-size:.95rem}
+@media (max-width:760px){
+  .route{grid-template-columns:1fr;gap:0}
+  .route::before{left:15px;right:auto;top:17px;bottom:17px;width:4px;height:auto;background:repeating-linear-gradient(180deg,var(--ochre) 0 14px,transparent 14px 22px)}
+  .route li{display:grid;grid-template-columns:34px 1fr;column-gap:14px;text-align:left;padding:6px 0;align-items:center}
+  .route .dot{margin:0}
+  .route .km{grid-column:2}
+}
+
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;border-top:2px solid var(--forest)}
+.facts div{padding:16px 16px 16px 0;border-bottom:1px solid var(--line)}
+.facts dt{font-weight:600;color:var(--muted);font-size:.92rem}
+.facts dd{margin:4px 0 0;font-size:1.05rem}
+
+/* tables */
+.tbl{overflow-x:auto;margin:12px 0 20px;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:.98rem}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;background:var(--forest-soft);color:var(--ink);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.total td{font-weight:600;border-top:2px solid var(--forest)}
+.day{white-space:nowrap;font-weight:600}
+tr.ride td:first-child{box-shadow:inset 4px 0 0 var(--ochre)}
+
+/* flights */
+.legs{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.leg{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--forest);padding:18px 20px;border-radius:0 0 6px 6px}
+.leg h3{margin:0 0 .3em}
+.leg .times{font-family:var(--head);font-size:1.6rem;font-weight:600}
+.leg p{margin:.3em 0;font-size:.97rem}
+.leg .price{font-weight:600}
+.pending{color:var(--red);font-weight:600}
+
+.note{border-left:4px solid var(--red);background:var(--surface);padding:12px 16px;margin:16px 0;max-width:75ch}
+ul{padding-left:1.2em;max-width:72ch}
+li{margin:.3em 0}
+footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
+</style>
+</head>
+<body>
+
+<nav aria-label="Sections"><div class="wrap">
+  <a href="#overview">Overview</a>
+  <a href="#days">Day by day</a>
+  <a href="#flights">Flights</a>
+  <a href="#stays">Stays</a>
+  <a href="#longtan">Long Tan</a>
+  <a href="#costs">Costs</a>
+  <a href="#checklist">Checklist</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Vietnam, March 2027</h1>
+  <p class="sub">Seven days riding the Hidden Lands of Northwest Vietnam on Honda CRF300Ls, then three nights in Saigon and a day at Long Tan.</p>
+  <ol class="route" aria-label="Riding route, day by day">
+    <li><span class="dot">S</span><span class="place">Hanoi</span><span class="km">Fri 5 Mar</span></li>
+    <li><span class="dot">1</span><span class="place">Moc Chau</span><span class="km">210 km</span></li>
+    <li><span class="dot">2</span><span class="place">Muong La</span><span class="km">180 km</span></li>
+    <li><span class="dot">3</span><span class="place">Tuan Giao</span><span class="km">190 km</span></li>
+    <li><span class="dot">4</span><span class="place">Muong Lay</span><span class="km">180 km</span></li>
+    <li><span class="dot">5</span><span class="place">Sapa</span><span class="km">180 km</span></li>
+    <li><span class="dot">6</span><span class="place">Thac Ba Lake</span><span class="km">230 km</span></li>
+    <li class="end"><span class="dot">7</span><span class="place">Hanoi</span><span class="km">180 km</span></li>
+  </ol>
+  <p class="route-total">About 1,350 km over seven days, with support vehicle and guide.</p>
+  <p class="updated">Last updated 8 October 2026 by Bruce (hotel budget raised to US$150 a night). This page is the master copy, so check back here for changes.</p>
+</div></header>
+
+<main>
+<section id="overview"><div class="wrap">
+  <h2>Overview</h2>
+  <dl class="facts">
+    <div><dt>Riders</dt><dd>Bruce, Brendan, Creagh and Doug</dd></div>
+    <div><dt>Rooms</dt><dd>Bruce &amp; Brendan<br>Creagh &amp; Doug</dd></div>
+    <div><dt>Whole trip</dt><dd>Wed 3 Mar – Mon 15 Mar 2027</dd></div>
+    <div><dt>Ride</dt><dd>Fri 5 – Thu 11 Mar, pickup 08:00 from the Hanoi hotel</dd></div>
+    <div><dt>Bikes</dt><dd>Honda CRF300L × 4</dd></div>
+    <div><dt>Tour operator</dt><dd>Motorbike Tour Expert, Hanoi. Our contact is James Vu; Bruce has his details.</dd></div>
+    <div><dt>Leave needed</dt><dd>8 working days</dd></div>
+    <div><dt>Treasurer</dt><dd>Bruce. Settle up with him.</dd></div>
+  </dl>
+  <div class="note">You enter Vietnam at <strong>Ho Chi Minh City</strong> on the way in and leave from there too. Choose <strong>Tan Son Nhat (SGN)</strong> as both the entry and exit port on your e-visa.</div>
+</div></section>
+
+<section id="days"><div class="wrap">
+  <h2>Day by day</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Date</th><th>Plan</th><th>Overnight</th></tr></thead>
+    <tbody>
+      <tr><td class="day">Wed 3 Mar</td><td>23:40 VJ084 Brisbane → Ho Chi Minh City</td><td>On the plane</td></tr>
+      <tr><td class="day">Thu 4 Mar</td><td>05:05 land SGN, clear immigration, walk T2 → T1. 08:40 VJ148 to Hanoi, land 10:50. Afternoon free.</td><td>Hanoi</td></tr>
+      <tr class="ride"><td class="day">Fri 5 Mar</td><td>08:00 pickup. Day 1: Hanoi → Moc Chau, 210 km</td><td>Moc Chau homestay</td></tr>
+      <tr class="ride"><td class="day">Sat 6 Mar</td><td>Day 2: Moc Chau → Muong La, 180 km</td><td>Muong La</td></tr>
+      <tr class="ride"><td class="day">Sun 7 Mar</td><td>Day 3: Muong La → Tuan Giao, 190 km</td><td>Tuan Giao homestay</td></tr>
+      <tr class="ride"><td class="day">Mon 8 Mar</td><td>Day 4: Tuan Giao → Muong Lay, 180 km</td><td>Hotel on the Da River</td></tr>
+      <tr class="ride"><td class="day">Tue 9 Mar</td><td>Day 5: Muong Lay → Sapa over O Quy Ho pass, 180 km</td><td>Red Dao village, Sapa</td></tr>
+      <tr class="ride"><td class="day">Wed 10 Mar</td><td>Day 6: Sapa → Thac Ba Lake, 230 km. Boat trip and farewell dinner.</td><td>Thac Ba Lake</td></tr>
+      <tr class="ride"><td class="day">Thu 11 Mar</td><td>Day 7: Thac Ba Lake → Hanoi, 180 km. Drop-off about 16:00.</td><td>Hanoi</td></tr>
+      <tr><td class="day">Fri 12 Mar</td><td>Leave hotel about 05:00. 07:00 VJ1139 Hanoi → Ho Chi Minh City, land 09:10.</td><td>Saigon</td></tr>
+      <tr><td class="day">Sat 13 Mar</td><td>Long Tan &amp; Nui Dat battlefield day tour</td><td>Saigon</td></tr>
+      <tr><td class="day">Sun 14 Mar</td><td>Free day in Saigon</td><td>Saigon</td></tr>
+      <tr><td class="day">Mon 15 Mar</td><td>10:40 VJ083 Ho Chi Minh City → Brisbane, land 22:10</td><td>Home</td></tr>
+    </tbody>
+  </table></div>
+  <p>Early March up north is usually cool and often misty or drizzly, and Sapa can be cold at night, so bring layers. Saigon will be hot and dry.</p>
+</div></section>
+
+<section id="flights"><div class="wrap">
+  <h2>Flights</h2>
+  <p>All three flights are with Vietjet. Hanoi airport transfers are included in the tour.</p>
+  <div class="legs">
+    <article class="leg">
+      <h3>Brisbane → Hanoi</h3>
+      <div class="times">23:40 → 10:50</div>
+      <p>Wed 3 → Thu 4 Mar, via Ho Chi Minh City</p>
+      <p>VJ084 BNE → SGN, then VJ148 SGN → HAN</p>
+      <p class="price">SkyBoss, A$639.89 each</p>
+    </article>
+    <article class="leg">
+      <h3>Hanoi → Ho Chi Minh City</h3>
+      <div class="times">07:00 → 09:10</div>
+      <p>Fri 12 Mar, direct</p>
+      <p>VJ1139</p>
+      <p class="price">SkyBoss, A$138.60 each</p>
+    </article>
+    <article class="leg">
+      <h3>Ho Chi Minh City → Brisbane</h3>
+      <div class="times">10:40 → 22:10</div>
+      <p>Mon 15 Mar, direct. No direct flight on Sundays.</p>
+      <p>VJ083</p>
+      <p class="pending">Fare still to decide: SkyBoss A$1,013.25 or Deluxe A$595.25 each</p>
+    </article>
+  </div>
+  <h3>Flight home: SkyBoss or Deluxe?</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Fare</th><th class="num">Each</th><th class="num">Group of 4</th><th class="num">Whole trip, each</th></tr></thead>
+    <tbody>
+      <tr><td>SkyBoss</td><td class="num">A$1,013.25</td><td class="num">A$4,053.00</td><td class="num">≈ A$5,795</td></tr>
+      <tr><td>Deluxe</td><td class="num">A$595.25</td><td class="num">A$2,381.00</td><td class="num">≈ A$5,377</td></tr>
+      <tr class="total"><td>Difference</td><td class="num">A$418.00</td><td class="num">A$1,672.00</td><td class="num"></td></tr>
+    </tbody>
+  </table></div>
+  <p>SkyBoss adds lounge access and priority boarding. Compare the baggage allowances before choosing, because everything comes home on this flight.</p>
+</div></section>
+
+<section id="stays"><div class="wrap">
+  <h2>Where we're staying</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Where</th><th>Nights</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Hanoi, Old Quarter</td><td>Thu 4 Mar</td><td>Same hotel before and after the ride. Leave big bags there for the week. Breakfast by 07:00 for the 08:00 pickup.</td></tr>
+      <tr><td>On tour</td><td>5 – 10 Mar</td><td>Homestays and hotels, included in the tour, twin share</td></tr>
+      <tr><td>Hanoi, Old Quarter</td><td>Thu 11 Mar</td><td>Collect bags. Car to the airport at about 05:00 next morning.</td></tr>
+      <tr><td>Saigon, District 1</td><td>12, 13, 14 Mar</td><td>Ask for early check-in or bag storage on arrival at 09:10.</td></tr>
+    </tbody>
+  </table></div>
+  <p>Hotels not booked yet. Budget is US$150 per room per night in both Hanoi and Saigon.</p>
+</div></section>
+
+<section id="longtan"><div class="wrap">
+  <h2>Long Tan, Sat 13 March</h2>
+  <p>The Battle of Long Tan was fought on 18 August 1966 in a rubber plantation in what is now Ba Ria–Vung Tau province. D Company, 6RAR, held off a far larger Viet Cong force. Seventeen Australian infantrymen and one APC crewman were killed.</p>
+  <p>A full-day tour from Saigon is about 2 to 2.5 hours' drive each way. Typical stops:</p>
+  <ul>
+    <li>The Long Tan Cross memorial in the plantation</li>
+    <li>Nui Dat, the former 1st Australian Task Force base</li>
+    <li>The Long Phuoc tunnels</li>
+    <li>Optionally Vung Tau</li>
+  </ul>
+  <p>Creagh and Doug are leading this one. Plan is a private tour for the four of us, with site permits included, at about US$150 each.</p>
+</div></section>
+
+<section id="costs"><div class="wrap">
+  <h2>What it costs, per person</h2>
+  <p>Estimates in Australian dollars at A$1 ≈ US$0.70, with a SkyBoss flight home. Bruce's spreadsheet is the working copy, and these figures follow it.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th class="num">Each</th></tr></thead>
+    <tbody>
+      <tr><td>Hidden Lands tour on a CRF300L, plus a share of the support vehicle</td><td class="num">A$2,152</td></tr>
+      <tr><td>Flights, all three legs</td><td class="num">A$1,792</td></tr>
+      <tr><td>Hotels in Hanoi and Saigon</td><td class="num">A$536</td></tr>
+      <tr><td>Saigon: Long Tan tour, meals and spending</td><td class="num">A$472</td></tr>
+      <tr><td>Drinks and tips on the ride</td><td class="num">A$286</td></tr>
+      <tr><td>Contingency</td><td class="num">A$200</td></tr>
+      <tr><td>Hanoi meals and spending</td><td class="num">A$172</td></tr>
+      <tr><td>Travel insurance with motorbike cover</td><td class="num">A$150</td></tr>
+      <tr><td>Vietnam e-visa</td><td class="num">A$36</td></tr>
+      <tr class="total"><td>Total</td><td class="num">≈ A$5,795</td></tr>
+    </tbody>
+  </table></div>
+  <p>With a Deluxe flight home the total drops to about A$5,377.</p>
+  <h3>Paying for the tour</h3>
+  <ul>
+    <li>Deposit: US$200 each, paid through Bruce to secure the booking</li>
+    <li>Balance on arrival: US$1,305 each, paid to the tour company in Hanoi. Bring cash in US dollars unless James confirms card.</li>
+  </ul>
+</div></section>
+
+<section id="checklist"><div class="wrap">
+  <h2>Before you go</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>Passport</td><td>Valid until at least mid-September 2027</td></tr>
+      <tr><td>Vietnam e-visa</td><td>Apply only at evisa.gov.vn. Entry and exit port: Tan Son Nhat (SGN).</td></tr>
+      <tr><td>Motorbike licence</td><td>Confirm with James and your insurer what they need to see</td></tr>
+      <tr><td>Travel insurance</td><td>Must cover riding a motorbike in Vietnam. Check licence conditions and medical evacuation.</td></tr>
+      <tr><td>Bike damage insurance</td><td>Not in the tour price. Bruce is asking James for the cost and excess.</td></tr>
+      <tr><td>Money</td><td>A card with no foreign exchange fees, plus US dollars for the tour balance</td></tr>
+      <tr><td>Clothing</td><td>Warm layers for the mountains. Helmet, gloves, pads and rain gear are supplied.</td></tr>
+      <tr><td>Deposit</td><td>Your share paid to Bruce</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <p>Questions or changes: message Bruce.</p>
+</div></footer>
+</body>
+</html>
