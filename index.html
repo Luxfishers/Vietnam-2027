@@ -100,6 +100,10 @@ tr.ride td:first-child{box-shadow:inset 4px 0 0 var(--ochre)}
 .note{border-left:4px solid var(--red);background:var(--surface);padding:12px 16px;margin:16px 0;max-width:75ch}
 ul{padding-left:1.2em;max-width:72ch}
 li{margin:.3em 0}
+.btn{display:inline-block;background:var(--forest);color:#fff;text-decoration:none;font-family:var(--head);font-weight:600;font-size:1.2rem;padding:12px 22px;border-radius:6px;margin:8px 0 12px}
+.btn:hover{filter:brightness(1.1)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0E1512}}
+:root[data-theme="dark"] .btn{color:#0E1512}
 footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
 </style>
 </head>
@@ -113,6 +117,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
   <a href="#longtan">Long Tan</a>
   <a href="#costs">Costs</a>
   <a href="#checklist">Checklist</a>
+  <a href="#notes">Notes</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -277,6 +282,12 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
       <tr><td>Deposit</td><td>Your share paid to Bruce</td></tr>
     </tbody>
   </table></div>
+</div></section>
+<section id="notes"><div class="wrap">
+  <h2>Our notes</h2>
+  <p>Questions, ideas, packing lists, things to ask James and anything else go in our shared Google Doc, "Vietnam Chat". Anyone with the link can open it, and no sign-in is needed.</p>
+  <a class="btn" href="https://docs.google.com/document/d/1UB1hz6MV3x8ij0p7hGZs2oWUwE0oMCFfF9_dG8W3vKI/edit?usp=sharing" target="_blank" rel="noopener">Open Vietnam Chat</a>
+  <p>Put your name next to anything you add, so we know who said what. Decisions still get made on this page, so if something's agreed in the doc, let Bruce know and he'll update it here.</p>
 </div></section>
 </main>
 
