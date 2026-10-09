@@ -104,6 +104,11 @@ li{margin:.3em 0}
 .btn:hover{filter:brightness(1.1)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0E1512}}
 :root[data-theme="dark"] .btn{color:#0E1512}
+.doclist{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:16px 0}
+.doclist a{display:block;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--forest);border-radius:6px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.doclist a:hover{border-left-color:var(--ochre)}
+.doclist strong{display:block;font-family:var(--head);font-size:1.25rem;color:var(--forest)}
+.doclist span{font-size:.95rem;color:var(--muted)}
 footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
 </style>
 </head>
@@ -117,6 +122,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
   <a href="#longtan">Long Tan</a>
   <a href="#costs">Costs</a>
   <a href="#checklist">Checklist</a>
+  <a href="#documents">Documents</a>
   <a href="#notes">Notes</a>
   <a href="https://docs.google.com/document/d/1UB1hz6MV3x8ij0p7hGZs2oWUwE0oMCFfF9_dG8W3vKI/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Vietnam Chat (opens Google Doc in a new tab)">Vietnam Chat ↗</a>
 </div></nav>
@@ -245,7 +251,7 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
 
 <section id="costs"><div class="wrap">
   <h2>What it costs, per person</h2>
-  <p>Estimates in Australian dollars at A$1 ≈ US$0.70, with a Deluxe flight home. Bruce's spreadsheet is the working copy, and these figures follow it.</p>
+  <p>Estimates in Australian dollars at A$1 ≈ US$0.70, with a Deluxe flight home. The <a href="https://docs.google.com/spreadsheets/d/1PW2W2rQJnA2zb3dw03hwTzQ9fpqkPk74R6aqIScuqQo/edit" target="_blank" rel="noopener">Cost Tracker</a> is the working copy, and these figures follow it.</p>
   <div class="tbl"><table>
     <thead><tr><th>Item</th><th class="num">Each</th></tr></thead>
     <tbody>
@@ -284,6 +290,21 @@ footer{padding:40px 0 56px;color:var(--muted);font-size:.92rem}
     </tbody>
   </table></div>
 </div></section>
+<section id="documents"><div class="wrap">
+  <h2>Trip documents</h2>
+  <p>The detailed documents live in our shared Google Drive folder. Bruce keeps them up to date, and this page summarises them. If a link asks you to sign in or request access, message Bruce.</p>
+  <div class="doclist">
+    <a href="https://drive.google.com/drive/folders/176_l5tNQKZqdHrJGm-b0R3SgyDSuUDb7" target="_blank" rel="noopener"><strong>Trip folder (Google Drive) ↗</strong><span>Everything in one place, including James's quote and the itinerary PDF</span></a>
+    <a href="https://docs.google.com/spreadsheets/d/1PW2W2rQJnA2zb3dw03hwTzQ9fpqkPk74R6aqIScuqQo/edit" target="_blank" rel="noopener"><strong>Cost Tracker (Google Sheet) ↗</strong><span>Full budget, who pays what, payments log and settle-up</span></a>
+    <a href="https://docs.google.com/document/d/1zlIhljWh9F4unuz8ZljWWYjc7QmmnGvokpC2TTfaC10/edit" target="_blank" rel="noopener"><strong>Trip Overview ↗</strong><span>Timeline, room pairings and the to-do list</span></a>
+    <a href="https://docs.google.com/document/d/1VCxtCr0QCIYzVJ3YiGSBxYZbMC1Q7Bi-87jzXPSbGQs/edit" target="_blank" rel="noopener"><strong>Flights ↗</strong><span>All legs, fares and booking references</span></a>
+    <a href="https://docs.google.com/document/d/1gTm6i4rO2Ae5CiKFKf1Hfwfp-kU1TcS1ITwncCrYp3M/edit" target="_blank" rel="noopener"><strong>Accommodation ↗</strong><span>Hanoi and Saigon requirements and hotel shortlist</span></a>
+    <a href="https://docs.google.com/document/d/1rvQqLq5XnE6ZGGp3bdpBTZNunlkYVDde4KQwWG9pjS4/edit" target="_blank" rel="noopener"><strong>Travel Docs & Insurance Checklist ↗</strong><span>Passport, e-visa, licence and insurance</span></a>
+    <a href="https://docs.google.com/document/d/1CHpgzAnBPUpdVJrLJ5nVH5aGcWdomRGryepjU_VOf90/edit" target="_blank" rel="noopener"><strong>Long Tan Tour ↗</strong><span>The battle and our day tour plans</span></a>
+    <a href="https://docs.google.com/document/d/1UB1hz6MV3x8ij0p7hGZs2oWUwE0oMCFfF9_dG8W3vKI/edit?usp=sharing" target="_blank" rel="noopener"><strong>Vietnam Chat ↗</strong><span>Shared notes and questions</span></a>
+  </div>
+</div></section>
+
 <section id="notes"><div class="wrap">
   <h2>Our notes</h2>
   <p>Questions, ideas, packing lists, things to ask James and anything else go in our shared Google Doc, "Vietnam Chat". Anyone with the link can open it, and no sign-in is needed.</p>
